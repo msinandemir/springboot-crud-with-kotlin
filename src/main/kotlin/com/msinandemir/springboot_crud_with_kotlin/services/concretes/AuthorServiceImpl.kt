@@ -9,7 +9,9 @@ import com.msinandemir.springboot_crud_with_kotlin.entities.Author
 import com.msinandemir.springboot_crud_with_kotlin.repositories.AuthorRepository
 import com.msinandemir.springboot_crud_with_kotlin.services.abstracts.AuthorService
 import jakarta.persistence.EntityNotFoundException
+import org.springframework.stereotype.Service
 
+@Service
 class AuthorServiceImpl(private val authorRepository: AuthorRepository) : AuthorService {
     override fun getAuthorById(authorId: Long): GetAuthorResponses {
         findAuthorById(authorId)

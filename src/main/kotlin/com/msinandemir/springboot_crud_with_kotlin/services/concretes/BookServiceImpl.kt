@@ -5,14 +5,15 @@ import com.msinandemir.springboot_crud_with_kotlin.dtos.requests.UpdateBookReque
 import com.msinandemir.springboot_crud_with_kotlin.dtos.responses.GetBookResponse
 import com.msinandemir.springboot_crud_with_kotlin.dtos.responses.SaveBookResponse
 import com.msinandemir.springboot_crud_with_kotlin.dtos.responses.UpdateBookResponse
-import com.msinandemir.springboot_crud_with_kotlin.entities.Author
 import com.msinandemir.springboot_crud_with_kotlin.entities.Book
 import com.msinandemir.springboot_crud_with_kotlin.repositories.BookRepository
 import com.msinandemir.springboot_crud_with_kotlin.services.abstracts.AuthorService
 import com.msinandemir.springboot_crud_with_kotlin.services.abstracts.BookService
 import com.msinandemir.springboot_crud_with_kotlin.services.abstracts.CategoryService
 import jakarta.persistence.EntityNotFoundException
+import org.springframework.stereotype.Service
 
+@Service
 class BookServiceImpl(
     private val bookRepository: BookRepository,
     private val authorService: AuthorService,

@@ -9,7 +9,9 @@ import com.msinandemir.springboot_crud_with_kotlin.entities.Category
 import com.msinandemir.springboot_crud_with_kotlin.repositories.CategoryRepository
 import com.msinandemir.springboot_crud_with_kotlin.services.abstracts.CategoryService
 import jakarta.persistence.EntityNotFoundException
+import org.springframework.stereotype.Service
 
+@Service
 class CategoryServiceImpl(private val categoryRepository: CategoryRepository) : CategoryService {
 
     override fun getCategoryById(categoryId: Long): GetCategoryResponses {
